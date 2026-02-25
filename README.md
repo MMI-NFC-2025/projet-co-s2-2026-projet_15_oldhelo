@@ -16,7 +16,7 @@
 
 | Étudiants    | Prénom NOM  |
 | :----------- | :---------- |
-| Étudiant 1   | à compléter |
+| Étudiant 1   | Merlin Henry |
 | Étudiant 2   | à compléter |
 | Étudiant 3   | à compléter |
 | (Étudiant 4) | à compléter |
