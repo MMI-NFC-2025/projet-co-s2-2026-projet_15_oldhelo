@@ -17,6 +17,6 @@
 | Étudiants    | Prénom NOM  |
 | :----------- | :---------- |
 | Étudiant 1   | Merlin Henry |
-| Étudiant 2   | à compléter |
-| Étudiant 3   | à compléter |
+| Étudiant 2   | Théo Philbert |
+| Étudiant 3   | Lucile Prothon |
 | (Étudiant 4) | à compléter |
