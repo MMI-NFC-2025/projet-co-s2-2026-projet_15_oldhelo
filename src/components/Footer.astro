@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import Image from 'astro/components/Image.astro';
+import Explication from '../assets/image/textless_logo.svg';
+---
+<footer class="bg-[#f2ece4] text-[#2e2e2e]">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <div class="grid gap-12 md:grid-cols-[minmax(220px,1fr)_repeat(3,minmax(160px,1fr))] items-start">
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <Image src={Explication} alt="Agevia logo" class="w-14 h-10 object-contain" />
+        </div>
+       </div>
+
+      <div class="space-y-3 text-sm">
+        <p class="text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Info</p>
+        <ul class="space-y-1">
+          <li><a href="/annonces" class="text-[#2e2e2e] hover:text-[#2f5d62]">Annonces</a></li>
+          <li><a href="/abonnements" class="text-[#2e2e2e] hover:text-[#E2474B]">Abonnements</a></li>
+          <li><a href="/apropos" class="text-[#2e2e2e] hover:text-[#2f5d62]">A Propos de nous</a></li>
+          <li><a href="/faq" class="text-[#2e2e2e] hover:text-[#2f5d62]">FAQ</a></li>
+          <li><a href="/faq" class="text-[#2e2e2e] hover:text-[#2f5d62]">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3 text-sm">
+        <p class="text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Nous contacter</p>
+        <ul class="space-y-2">
+          <li class="text-[#2e2e2e]">+1 980 971-24-19</li>
+          <li class="text-[#2e2e2e]">hello@logoipsum.com</li>
+        </ul>
+      </div>
+
+      <div class="space-y-3 text-sm">
+        <p class="text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Trouver nous</p>
+        <p class="text-[#2E2E2E]">1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+        <p class="text-[#6b6b6b]">Tous les jours de 14h à 18h</p>
+      </div>
+    </div>
+  </div>
+</footer>

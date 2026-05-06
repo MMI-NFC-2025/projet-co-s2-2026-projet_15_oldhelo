@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Couleurs */
+:root {
+  /* Mode 1 */
+  /* color */
+  --accent-primaire: #c76d45;
+  --accent-secondaire: #e6a07c;
+  --background-principal: #fafaf8;
+  --background-soft: #f2ece4;
+  --background-succès: #e6f2ec;
+  --bordure: #e0e0db;
+  --couleur-primaire: #2f5d62;
+  --couleur-secondaire: #9cc5a1;
+  --erreur: #cc2a2a;
+  --mise-en-garde: #f2b705;
+  --succès: #5fb3a2;
+  --texte-handicapé: #a8a8a8;
+  --texte-primaire: #2e2e2e;
+  --texte-secondaire: #6b6b6b;
+}
