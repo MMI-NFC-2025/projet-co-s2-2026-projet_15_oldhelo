@@ -3,5 +3,102 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <div class="min-h-screen bg-[#fafaf8] py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      {/* Titre */}
+      <h1 class="text-4xl font-oswald font-bold text-[#2f5d62] mb-12 text-center">Abonnement</h1>
 
+      {/* Cartes d'abonnement */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Plan Gratuit */}
+        <div class="border-2 border-black rounded-lg p-8 bg-white hover:shadow-lg transition-shadow flex flex-col">
+          <div class="flex-1">
+            <h2 class="text-2xl font-oswald font-bold text-[#2f5d62] mb-4">Gratuit</h2>
+            <p class="text-[#6b6b6b] text-sm mb-6">Pour tester le site sans pression.</p>
+            
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-black">0€</span>
+              <span class="text-[#6b6b6b] ml-2">Euros par mois</span>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="font-bold text-[#2f5d62] mb-3">Inclut :</h3>
+              <ul class="space-y-2 text-sm text-[#2e2e2e]">
+                <li class="flex items-center">
+                  <span class="mr-2">•</span>
+                  <span>Limite de 7 annonces/mois</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="w-full bg-black text-white py-3 rounded font-bold hover:bg-gray-800 transition-colors">
+            C'est parti
+          </button>
+        </div>
+
+        {/* Plan Étudiant */}
+        <div class="gradient-logo-border rounded-lg p-8 hover:shadow-lg transition-shadow flex flex-col">
+          <div class="flex-1">
+            <h2 class="text-2xl font-oswald font-bold text-[#2f5d62] mb-4">Abonnement Étudiant</h2>
+            <p class="text-[#6b6b6b] text-sm mb-6">Pour les étudiants qui souhaitent répondre aux annonces</p>
+            
+            <div class="mb-6">
+              <span class="text-4xl font-bold bg-gradient-to-r from-[#2f5d62] to-[#9cc5a1] bg-clip-text text-transparent">7€</span>
+              <span class="text-[#6b6b6b] ml-2">Euros par mois</span>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="font-bold text-[#2f5d62] mb-3">Inclut :</h3>
+              <ul class="space-y-2 text-sm text-[#2e2e2e]">
+                <li class="flex items-center">
+                  <span class="mr-2">•</span>
+                  <span>Toutes les annonces visibles</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="mr-2">•</span>
+                  <span>Gagnez plus de points de récompense</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="w-full gradient-logo text-white py-3 rounded font-bold hover:opacity-90 transition-opacity">
+            C'est parti
+          </button>
+        </div>
+
+        {/* Plan Senior et Famille */}
+        <div class="gradient-logo-border rounded-lg p-8 hover:shadow-lg transition-shadow flex flex-col">
+          <div class="flex-1">
+            <h2 class="text-2xl font-oswald font-bold text-[#2f5d62] mb-4">Abonnement Senior et Famille</h2>
+            <p class="text-[#6b6b6b] text-sm mb-6">Pour les Seniors qui utilisent Agevia régulièrement</p>
+            
+            <div class="mb-6">
+              <span class="text-4xl font-bold bg-gradient-to-r from-[#2f5d62] to-[#9cc5a1] bg-clip-text text-transparent">7€</span>
+              <span class="text-[#6b6b6b] ml-2">Euros par mois</span>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="font-bold text-[#2f5d62] mb-3">Inclut :</h3>
+              <ul class="space-y-2 text-sm text-[#2e2e2e]">
+                <li class="flex items-center">
+                  <span class="mr-2">•</span>
+                  <span>∞ Annonces par mois</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="mr-2">•</span>
+                  <span>Les services les mieux notés</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="w-full gradient-logo text-white py-3 rounded font-bold hover:opacity-90 transition-opacity">
+            C'est parti
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
