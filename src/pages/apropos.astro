@@ -1,18 +1,87 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="À propos">
-  <h1>À propos</h1>
-<p><strong> Qui sommes nous ? </strong></p>
-<p>Nous sommes un groupe de trois étudiants, situé à l’université de Montbéliard Porte du Jura en BUT des Métiers du Multimédia et de l’Internet (MMI) en première année. Dans le cadre de notre formation, nous développons des projets concrets mêlant communication, stratégie digitale et conception de services numériques. Agevia est né d’un projet pédagogique ayant pour objectif de concevoir une solution innovante répondant à une problématique sociétale réelle.</p>
-<p>Notre ambition est de proposer une solution à la fois réfléchie, réaliste et porteuse de sens.</p>
-<p><strong>Pourquoi ce projet ? </strong></p>
-<p>A la suite de la demande d’un projet innovant, l’idée d’Agevia nous est venue. une solution pensée pour lutter contre l’isolement social des personnes âgées tout en répondant aux besoins des étudiants. </p>
-<p>Nous sommes partis d’un double constat :</p>
-<ul>
-  <li>L’isolement des seniors constitue aujourd’hui un véritable enjeu social.</li>
-  <li>De nombreux étudiants recherchent des opportunités d’emploi flexibles et compatibles avec leurs études.</li>
-  </ul>
-<p>Notre objectif est de créer un lien intergénérationnel bénéfique pour tous, en proposant une solution humaine, accessible et adaptée aux besoins de chacun.</p>
+  <div class="bg-[#fafaf8]">
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#f2ece4] to-transparent"></div>
+      <div class="absolute -right-20 top-8 h-56 w-56 rounded-full bg-[#9cc5a1]/20 blur-3xl"></div>
+      <div class="absolute -left-16 top-36 h-44 w-44 rounded-full bg-[#2f5d62]/10 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+        <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <header class="space-y-6">
+            <div class="space-y-2">
+              <p class="text-xs uppercase tracking-[0.28em] text-[#6b6b6b]">Présentation</p>
+              <h2 class="font-oswald text-3xl text-[#2f5d62] sm:text-4xl">À propos d’Agevia</h2>
+            </div>
+            <div class="space-y-4">
+              <h1 class="font-oswald text-5xl leading-tight text-[#2e2e2e] sm:text-6xl">
+                Une plateforme pensée pour créer du lien utile.
+              </h1>
+              <p class="max-w-2xl text-lg leading-8 text-[#6b6b6b]">
+                Agevia est née d’un projet pédagogique avec une ambition simple : concevoir une solution concrète,
+                humaine et accessible pour rapprocher les générations, tout en répondant à des besoins réels du quotidien.
+              </p>
+            </div>
+
+          </header>
+
+          <div class="rounded-[2rem] border border-[#e0e0db] bg-white/90 p-6 shadow-[0_14px_40px_rgba(47,93,98,0.08)] backdrop-blur sm:p-8">
+            <p class="text-xs uppercase tracking-[0.24em] text-[#6b6b6b]">Notre intention</p>
+            <div class="mt-5 space-y-4">
+              <div class="rounded-2xl bg-[#f2ece4] p-4">
+                <p class="text-sm font-semibold text-[#2f5d62]">Pour les seniors</p>
+                <p class="mt-1 text-sm leading-7 text-[#6b6b6b]">Trouver de l’aide locale, ponctuelle et rassurante pour mieux vivre le quotidien.</p>
+              </div>
+              <div class="rounded-2xl bg-[#f2ece4] p-4">
+                <p class="text-sm font-semibold text-[#2f5d62]">Pour les étudiants</p>
+                <p class="mt-1 text-sm leading-7 text-[#6b6b6b]">Accéder à des missions compatibles avec leurs études, utiles et valorisantes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-3xl border border-[#e0e0db] bg-white p-6 shadow-[0_10px_30px_rgba(47,93,98,0.06)]">
+          <p class="text-xs uppercase tracking-[0.24em] text-[#6b6b6b]">Qui sommes-nous ?</p>
+          <h2 class="mt-3 font-oswald text-2xl text-[#2e2e2e]">Une équipe étudiante MMI</h2>
+          <p class="mt-4 text-sm leading-7 text-[#6b6b6b]">
+            Nous sommes un groupe de trois étudiants de l’Université de Montbéliard Porte du Jura, en BUT Métiers du
+            Multimédia et de l’Internet, première année. Notre formation nous amène à imaginer et construire des services numériques concrets.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-[#e0e0db] bg-white p-6 shadow-[0_10px_30px_rgba(47,93,98,0.06)]">
+          <p class="text-xs uppercase tracking-[0.24em] text-[#6b6b6b]">Pourquoi ce projet ?</p>
+          <h2 class="mt-3 font-oswald text-2xl text-[#2e2e2e]">Un double constat</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-[#6b6b6b]">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>L’isolement des seniors reste un enjeu social majeur.</span></li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Les étudiants cherchent des missions flexibles, compatibles avec leurs études.</span></li>
+          </ul>
+        </article>
+
+        <article class="rounded-3xl border border-[#e0e0db] bg-[#f2ece4] p-6 shadow-[0_10px_30px_rgba(47,93,98,0.06)]">
+          <p class="text-xs uppercase tracking-[0.24em] text-[#6b6b6b]">Notre objectif</p>
+          <h2 class="mt-3 font-oswald text-2xl text-[#2e2e2e]">Créer un lien intergénérationnel</h2>
+          <p class="mt-4 text-sm leading-7 text-[#6b6b6b]">
+            Proposer une solution humaine, accessible et adaptée aux besoins de chacun, avec des missions utiles et une expérience simple.
+          </p>
+        </article>
+      </div>
+
+      <article class="mt-6 rounded-3xl border border-[#e0e0db] bg-gradient-to-r from-[#2f5d62] to-[#9cc5a1] p-8 text-white shadow-[0_14px_40px_rgba(47,93,98,0.12)]">
+        <p class="text-xs uppercase tracking-[0.24em] text-white/80">Vision</p>
+        <h2 class="mt-3 font-oswald text-3xl sm:text-4xl">Une solution locale, utile et porteuse de sens</h2>
+        <p class="mt-4 max-w-3xl text-sm leading-8 text-white/90 sm:text-base">
+          Agevia s’inscrit dans une démarche de proximité. Le projet cherche à répondre à un besoin réel tout en
+          valorisant les étudiants et en redonnant de la visibilité aux besoins du quotidien des seniors.
+        </p>
+      </article>
+    </section>
+  </div>
 </Layout>

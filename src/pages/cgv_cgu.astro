@@ -1,83 +1,144 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="CGV/CGU">
-    <h1>CONDITIONS GÉNÉRALES D’UTILISATION (CGU) - Agevia</h1>
-    <h3> <span>Article 1 – Objet</span></h3>
-    <p>Les présentes Conditions Générales d’Utilisation ont pour objet de définir les modalités d’accès et d’utilisation de la plateforme Agevia, spécialisée dans la mise en relation intergénérationnelle entre étudiants et seniors.</p>
-    <p>L'utilisation du site implique pleine et entière des présentes CGU.</p>
-    <h3> <span>Article 2 – Accès au service</span></h3>
-    <p>Le site Agevia est accessible à toute personne majeure souhaitant :</p>
-    <ul>
-        <li>Créer un compte utilisateur</li>
-        <li>Souscrire un abonnement</li>
-        <li>Être mise en relation avec un autre utilisateur</li>
-        <p>L'utilisateur s'engage à fournir des informations exactes et à jour.</p>
-    </ul>
-    <h3> <span>Article 3 – Création de compte</span></h3>
-    <p>La création d'un compte est obligatoire pour accéder aux services.</p>
-    <p>L'utilisateur est responsable de la confidentialité de ses identifiants et de toute activité réalisée depuis son compte.</p>
-    <h3> <span>Article 4 - Mise en relation</span></h3>
-    <p>Agevia propose un service de mise ne relation entre étudiants et séniors.</p>
-    <p>Agevia agit en tant qu'intermédiaire et ne peut être tenie responsable :</p>
-    <ul>
-        <li>Du comportement des utilisateurs</li>
-        <li>Des échanges réalisés en dehors de la plateforme</li>
-        <li>Des accords conclus entre utilisateurs</li>
-    </ul>
-    <p>Chaque utilsiateur s'engage à adopter un comportement respectueux et conforme à la loi.</p>
-    <h3> <span>Article 5 – Obligation des utilisateurs</span></h3>
-    <p>L'utilisateur s'engage à :</p>
-    <ul>
-        <li>Ne pas diffuser de contenu illégal ou offensant</li>
-        <li>Ne pas usurper l'identité d'un tiers</li>
-        <li>Respecter les autres membres</li>
-    </ul>
-    <p>Tout manquement peut entraîner la suspension ou la suppression du compte.</p>
-    <h3> <span>Article 6 – Responsabilité</span></h3>
-    <p>Agevia met en œuvre tous les moyens raisonnables pour assurer le bon fonctionnement du site.</p>
-    <p>Cependant, la responsabilité d’Agevia ne saurait être engagée en cas :</p>
-    <ul>
-        <li>D'interruption temporaire du service</li>
-        <li>De dysfonctionnement technique</li>
-        <li>De force majeure</li>
-    </ul>
-    <h3><span>Article 7 - Données personnelles</span></h3>
-    <p>Les données personnelles sont traitées conformément à la Politique de confidentialité disponible sur le site.</p>
-    <h3><span>Article 8 - Modification des CGU</span></h3>
-    <p>Agevia se réserve le droit de modifier les présentes CGU à tout moment.</p>
-    <p>Les utilisateurs seront informés en cas de modification substantielle.</p>
-    <h2>CONDITIONS GÉNÉRALES DE VENTE (CGV) – Agevia</h2>
-    <h3><span>Article 1 - Objet</span></h3>
-    <p>Les présentes CGV définissent les conditions de souscription aux abonnements proposés par Agevia.</p>
-    <h3><span>Article 2 - Abonnement</span></h3>
-    <p>Agevia propose des abonnements destinés :</p>
-    <ul>
-        <li>Aux étudiants</li>
-        <li>Aux séniors</li>
-    </ul>
-    <p>Les caractéristiques et tarifs des abonnements sont précisés sur la page <a href="/abonnement">abonnement</a>.</p>
-    <h3><span>Article 3 - Prix</span></h3>
-    <p>Les prix sont indiqués en euros (€)</p>
-    <p>Agevia se réserve le droit modifier ses tarifs. Les abonnements en cours ne sont pas impactées par une modification tarifaire</p>
-    <h3><span>Article 4 - Modalité de paiement</span></h3>
-    <p>Le paiement s’effectue en ligne via les moyens de paiement sécurisés proposés sur le site.</p>
-    <p>L’abonnement est activé après validation du paiement.</p>
-    <h3><span>Article 5 - Durée et résiliation</span></h3>
-    <p>L’abonnement est souscrit pour une durée de 1 mois.</p>
-    <p>L’utilisateur peut résilier son abonnement :</p>
-    <ul>
-        <li>A tout moment depuis son espace personnel</li>
-        <li>Ou par demande écrite à agevia.support@gmail.com</li>
-    </ul>
-    <p>La résiliation prend effet à la fin de la période en cours.</p>
-    <h3><span>Article 6 - Droit de rétractation</span></h3>
-    <p>Conformément à la législation en vigueur, l’utilisateur dispose d’un délai de 14 jours pour exercer son droit de rétractation, sauf si le service a commencé avec son accord exprès.</p>
-    <h3><span>Article 7 - Remboursement</span></h3>
-    <p>Aucun remboursement ne sera effectué pour une période d’abonnement déjà entamée, sauf obligation légale.</p>
-    <h3><span>Article 8 - Responsabilité</span></h3>
-    <p>Agevia ne peut être tenue responsable des relations établies entre utilisateurs ni des engagements pris en dehors de la plateforme.</p>
-    <h3><span>Article 9 - Litiges</span></h3>
-    <p>Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera privilégiée avant toute action judiciaire.</p>
+    <div class="bg-[#fafaf8]">
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-[#f2ece4] to-transparent"></div>
+            <div class="absolute -right-20 top-10 h-56 w-56 rounded-full bg-[#9cc5a1]/20 blur-3xl"></div>
+            <div class="absolute -left-16 top-44 h-44 w-44 rounded-full bg-[#2f5d62]/10 blur-3xl"></div>
+
+            <div class="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+                <div class="max-w-4xl">
+                    <header class="rounded-[2rem] border border-[#e0e0db] bg-white/85 p-6 shadow-[0_12px_35px_rgba(47,93,98,0.08)] backdrop-blur sm:p-8 lg:p-10">
+                        <div class="space-y-3 border-l-4 border-[#2f5d62] pl-5">
+                            <p class="text-xs uppercase tracking-[0.28em] text-[#6b6b6b]">Cadre légal</p>
+                            <h1 class="font-oswald text-5xl text-[#2e2e2e] sm:text-6xl">CGV / CGU</h1>
+                            <p class="max-w-3xl text-lg leading-8 text-[#6b6b6b] sm:text-xl">
+                                Cette page regroupe les conditions générales d’utilisation et de vente d’Agevia dans une présentation plus lisible et plus claire.
+                            </p>
+                        </div>
+                    </header>
+                </div>
+
+                <div class="mt-10 space-y-8">
+                    <article class="rounded-[2rem] border border-[#e0e0db] bg-white/90 p-6 shadow-[0_14px_40px_rgba(47,93,98,0.08)] backdrop-blur sm:p-8 lg:p-10">
+                        <div class="mb-6 inline-flex rounded-full bg-[#2f5d62] px-5 py-3 text-base font-semibold tracking-[0.14em] text-white shadow-sm">
+                            Conditions générales d’utilisation
+                        </div>
+                        <div class="space-y-6 text-[#2e2e2e]">
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 1 – Objet</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Les présentes Conditions Générales d’Utilisation ont pour objet de définir les modalités d’accès et d’utilisation de la plateforme Agevia, spécialisée dans la mise en relation intergénérationnelle entre étudiants et seniors.</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L'utilisation du site implique pleine et entière des présentes CGU.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 2 – Accès au service</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Le site Agevia est accessible à toute personne majeure souhaitant :</p>
+                                <ul class="mt-4 space-y-3 text-[#6b6b6b]">
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Créer un compte utilisateur</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Souscrire un abonnement</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Être mise en relation avec un autre utilisateur</span></li>
+                                </ul>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L'utilisateur s'engage à fournir des informations exactes et à jour.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 3 – Création de compte</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">La création d'un compte est obligatoire pour accéder aux services.</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L'utilisateur est responsable de la confidentialité de ses identifiants et de toute activité réalisée depuis son compte.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 4 – Mise en relation</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Agevia propose un service de mise en relation entre étudiants et séniors.</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Agevia agit en tant qu'intermédiaire et ne peut être tenue responsable :</p>
+                                <ul class="mt-4 space-y-3 text-[#6b6b6b]">
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Du comportement des utilisateurs</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Des échanges réalisés en dehors de la plateforme</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Des accords conclus entre utilisateurs</span></li>
+                                </ul>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Chaque utilisateur s'engage à adopter un comportement respectueux et conforme à la loi.</p>
+                            </section>
+                        </div>
+                    </article>
+
+                    <article class="rounded-[2rem] border border-[#e0e0db] bg-[#f2ece4] p-6 shadow-[0_14px_40px_rgba(47,93,98,0.08)] sm:p-8 lg:p-10">
+                        <div class="mb-6 inline-flex rounded-full bg-[#c76d45] px-5 py-3 text-base font-semibold tracking-[0.14em] text-white shadow-sm">
+                            Conditions générales de vente
+                        </div>
+                        <div class="space-y-6 text-[#2e2e2e]">
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 1 – Objet</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Les présentes CGV définissent les conditions de souscription aux abonnements proposés par Agevia.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 2 – Abonnement</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Agevia propose des abonnements destinés :</p>
+                                <ul class="mt-4 space-y-3 text-[#6b6b6b]">
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Aux étudiants</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Aux séniors</span></li>
+                                </ul>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Les caractéristiques et tarifs des abonnements sont précisés sur la page <a href="/abonnements" class="font-semibold text-[#2f5d62] underline decoration-[#9cc5a1] decoration-2 underline-offset-4">abonnements</a>.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 3 – Prix</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Les prix sont indiqués en euros (€).</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Agevia se réserve le droit de modifier ses tarifs. Les abonnements en cours ne sont pas impactés par une modification tarifaire.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 4 – Modalité de paiement</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">Le paiement s’effectue en ligne via les moyens de paiement sécurisés proposés sur le site.</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L’abonnement est activé après validation du paiement.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 5 – Durée et résiliation</h2>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L’abonnement est souscrit pour une durée de 1 mois.</p>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">L’utilisateur peut résilier son abonnement :</p>
+                                <ul class="mt-4 space-y-3 text-[#6b6b6b]">
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>À tout moment depuis son espace personnel</span></li>
+                                    <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-[#2f5d62]"></span><span>Ou par demande écrite à agevia.support@gmail.com</span></li>
+                                </ul>
+                                <p class="mt-3 leading-8 text-[#6b6b6b]">La résiliation prend effet à la fin de la période en cours.</p>
+                            </section>
+
+                            <section>
+                                <h2 class="font-oswald text-4xl text-[#2f5d62]">Article 6 à 9</h2>
+                                <div class="mt-4 space-y-3 leading-8 text-[#6b6b6b]">
+                                    <p>Conformément à la législation en vigueur, l’utilisateur dispose d’un délai de 14 jours pour exercer son droit de rétractation, sauf si le service a commencé avec son accord exprès.</p>
+                                    <p>Aucun remboursement ne sera effectué pour une période d’abonnement déjà entamée, sauf obligation légale.</p>
+                                    <p>Agevia ne peut être tenue responsable des relations établies entre utilisateurs ni des engagements pris en dehors de la plateforme.</p>
+                                    <p>Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera privilégiée avant toute action judiciaire.</p>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-6 rounded-[2rem] border border-[#e0e0db] bg-white/80 p-6 shadow-[0_10px_30px_rgba(47,93,98,0.06)] backdrop-blur sm:p-8">
+                    <p class="text-sm font-semibold uppercase tracking-[0.24em] text-[#6b6b6b]">À retenir</p>
+                    <div class="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                        <div class="rounded-2xl bg-[#f2ece4] p-4">
+                            <p class="text-base font-semibold text-[#2f5d62]">CGU</p>
+                            <p class="mt-1 text-sm leading-7 text-[#6b6b6b]">Tout ce qui concerne l’accès, l’utilisation du service et le comportement attendu sur la plateforme.</p>
+                        </div>
+                        <div class="rounded-2xl bg-[#f2ece4] p-4">
+                            <p class="text-base font-semibold text-[#2f5d62]">CGV</p>
+                            <p class="mt-1 text-sm leading-7 text-[#6b6b6b]">Tout ce qui concerne les abonnements, les prix, le paiement et la résiliation.</p>
+                        </div>
+                        <div class="rounded-2xl bg-[#f2ece4] p-4">
+                            <p class="text-base font-semibold text-[#2f5d62]">Contact</p>
+                            <p class="mt-1 text-sm leading-7 text-[#6b6b6b]">Pour toute question, écrivez à agevia.support@gmail.com.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </Layout>
