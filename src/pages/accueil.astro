@@ -7,14 +7,51 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Entraide Intergénérationnelle">
+
+  <div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/9n7l8sXo2j0"
+    title="Présentation d'Agevia"
+    allowfullscreen
+  ></iframe>
+</div>
 <h1>Vous recherchez un job étudiant, ou vous êtes en recherche d’aide a domicile ? </h1>
 <p> Missions <strong> variées </strong> et <strong> gratifiantes </strong> </p>
 <p> Localisé à <strong> Montbéliard et ses alentours</strong> </p>
 <p> Aide ponctuelle </p>
 <p> Simple à prendre en main </p>
 <p>Vidéo de présentation d’Agevia par les fondateurs du projet.</p>
-<a href="/demander_aide" class="button">Je recherche de l’aide</a>
-<a href="/donner_aide" class="button">Je veux aider</a>
+<a
+  href="/creacompte"
+  class="
+    inline-flex items-center justify-center
+    rounded-full
+    bg-gradient-to-r from-[#3E6F68] to-[#A8D1A8]
+    px-8 py-3
+    text-sm font-semibold uppercase tracking-wide
+    text-white
+    shadow-md
+    transition hover:scale-[1.02] hover:shadow-lg
+  "
+>
+  Je recherche de l’aide
+</a>
+<a
+  href="/creacompte"
+  class="
+    inline-flex items-center justify-center
+    rounded-full 
+    bg-gradient-to-r from-[#3E6F68] to-[#A8D1A8]
+    px-8 py-3
+    text-sm font-semibold uppercase tracking-wide
+    text-white
+    shadow-md
+    transition hover:scale-[1.02] hover:shadow-lg
+  "
+>
+  Je veux aider
+</a>
+
 <h2> Entraide intergénérationnelle </h2>
 <p> Comment ça marche :</p>
 <Image
@@ -27,13 +64,21 @@ Le système est simple : <strong>le senior publie une mission dont il a besoin, 
 <p> Agevia répond à des besoins bien réels. En 2026, <strong>près de 2 millions de personnes âgées de 60 ans et plus sont isolées en France</strong>. 
 Parmi elles, <strong>plus de 700 000 vivent une situation de "mort sociale"</strong>, sans interactions régulières avec leur entourage. </p>
 <p> Face à cette réalité, Agevia agit concrètement en recréant du lien social tout en apportant une aide utile au quotidien. </p>
+<div class="flex justify-center">
+  <a
+    href="/creacompte"
+    class="rounded-full bg-gradient-to-r from-[#2F5E58] via-[#6FA58A] to-[#A9D3A8] px-10 py-2.5 text-white font-semibold uppercase"
+  >
+    Rejoindre Agevia
+  </a>
+</div>
 <h3> Dernières requêtes</h3>
 <div class="dernières requêtes">
 <alt> Photo de profil de l’utilisateur </alt> 
 <p><strong>Besoin d’aide avec mon jardin</strong></p>
 Je ne peux plus arroser mon jardin et il faudrait [...]</a>
 </div>
-<h4> Foire aux questions (FAQ) </h4>
+<h4 class="text-center"> Foire aux questions (FAQ) </h4>
 <div class="FAQ">
 <strong> Quelles sont les missions types ? </strong>
 <p> Les missions sont diverses : promenade d’un animal de compagnie, ménage, compagnie, désherbage, aide administrative, etc. Pour les seniors, des modèles de missions ainsi qu’un guide sont proposés afin de vous aider lors de la création de vos annonces à destination des étudiants. </p>
