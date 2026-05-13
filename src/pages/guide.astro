@@ -1,26 +1,286 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Aide_connexion from '../assets/image/aide_connexion.webp';
+import Creation_compte from '../assets/image/creation_compte.webp';
+import Envoi_mission from '../assets/image/envoi_mission.webp';
 ---
+
 <Layout title="Guide d'utilisation Agevia">
-<h1> Guide d'utilisation Agevia</h1>
-<p>Dans ce guide, vous trouverez toutes les informations nécessaires pour utiliser pleinement les fonctionnalités de la plateforme.</p>
-<h2><span>Différents pop up</span></h2>
-<p>Contextuel</p>
-<p>→ Lors de la première utilisation, possibilité de les garder à chaque fois à l’aide d’un paramètre à activer - par défaut il sera toujours activé pour les séniors.</p>
-<p>Conseil</p>
-<p>→ A côté d’un champs en cours de remplissage</p>
-<p>Confirmation </p>
-<p>→ Après avoir effectuer une certaine action (payer/publier/envoyer..)</p>
-<p>Utilitaire </p>
-<p>→ Indique des fonctionnalité du système</p>
-<h2>Publier une mission</h2>
-<p>Vous aurez toutes les informations relatives à la publication d'une mission.</p>
-<Image
-  src={Envoi_mission}
-  alt="Image représentant l'envoi d'une mission."
-/>
-<p>Les différentes pop up que vous pourriez rencontrer sont les suivantes:</p>
-<ul>
-    <li>Félicitation  🥳 Vous venez de publier votre n annonce(s) !</li>
-</ul>
+    <div class="guide-page">
+        <section class="relative overflow-hidden">
+            <div class="guide-hero-sheen"></div>
+            <div class="guide-hero-orb guide-hero-orb--one"></div>
+            <div class="guide-hero-orb guide-hero-orb--two"></div>
+
+            <div class="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+                <header class="max-w-3xl">
+                    <div class="space-y-2 mb-6">
+                        <p class="guide-kicker">Guide pratique</p>
+                        <h1 class="guide-title font-oswald text-5xl sm:text-6xl">Guide : Utiliser Agevia rapidement</h1>
+                    </div>
+                    <p class="guide-lead text-lg leading-8 sm:text-xl max-w-2xl">
+                        Ce guide vous explique en quelques étapes comment demander de l'aide simplement et en toute sécurité. Il vous montre également comment utiliser certaines fonctionnalitées fondamentales.
+                    </p>
+                </header>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:px-8 space-y-8">
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-badge mb-6 inline-flex rounded-full px-4 py-2 text-sm font-semibold">
+                    Sommaire
+                </div>
+
+                <ul class="guide-list grid gap-3 rounded-2xl p-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <li>Création d'un compte</li>
+                    <li>Ajout d'une mission</li>
+                    <li>Choix de l'étudiant</li>
+                    <li>Paiement sécurisé</li>
+                    <li>Fin de mission</li>
+                    <li>Sécurité</li>
+                </ul>
+            </article>
+
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Création d'un compte</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="guide-text leading-8">Pour utiliser Agevia, vous devez créer un compte. Cela ne prend que quelques minutes.</p>
+
+                    <figure class="guide-media">
+                        <Image src={Aide_connexion} alt="Image de création/connection à son compte" class="guide-image" />
+                    </figure>
+
+                    <p class="guide-text leading-8">Cliquez sur l'icône entouré afin d'accéder à l'espace de création. Il permettra également d'accéder à votre compte, lorsque ce dernier sera créé.</p>
+
+                    <figure class="guide-media">
+                        <Image src={Creation_compte} alt="Image de création de compte" class="guide-image" />
+                    </figure>
+
+                    <p class="guide-text leading-8">Remplissez les informations demandées puis cliquez sur “Valider”.</p>
+
+                    <div class="guide-note">
+                        <p class="guide-note-text"><span>Conseil :</span>Votre mot de passe doit être connu de vous seul, ou de personne de confiance. Notez le dans un endroit sûr.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Ajout d'une mission</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <figure class="guide-media">
+                        <Image src={Envoi_mission} alt="Image d'envoi de mission" class="guide-image" />
+                    </figure>
+
+                    <p class="guide-text leading-8">Remplissez les informations demandées puis cliquez sur “Valider”.</p>
+
+                    <div class="guide-note">
+                        <p class="guide-note-text"><span>Conseil :</span>Plus votre description est précise, plus les étudiants pourront vous aider efficacement.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Choix de l'étudiant</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="guide-text leading-8">Accédez facilement aux profils des étudiants afin de faire le tri dans les réponses à vos missions. Vous pourrez le choisir grâce à la visualisation de son profil qui s’ouvre dans une fenêtre. </p>
+
+                    <p class="guide-plain">Présentation d’un profil étudiant</p>
+
+                    <div class="guide-note">
+                        <p class="guide-note-text"><span>Conseil :</span>Vous pouvez échanger avec l'étudiant avant de confirmer, si vous le souhaitez.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Paiement sécurisé</h2>
+                </div>
+
+                <p class="guide-text leading-8">Après chaque paiement, vous recevrez un message de confirmation. Le paiement sur Agevia est sécurisé. L’argent est versé uniquement lorsque la mission est terminée.</p>
+            </article>
+
+            <article class="guide-card p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Fin de mission</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="guide-text leading-8">L’indication de la fin de mission, déclenchera automatiquement le versement de l’argent à l'étudiant.</p>
+
+                    <div class="guide-note">
+                        <p class="guide-note-text"><span>Conseil :</span>N’hésitez pas à attribuer un avis.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="guide-card guide-security p-6 sm:p-8">
+                <div class="guide-section-head mb-6">
+                    <h2 class="guide-section-title font-oswald text-2xl sm:text-3xl">Sécurité</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="guide-security-text leading-8">Votre sécurité est importante pour nous.</p>
+                    <p class="guide-security-text leading-8">Voici quelques conseils simples pour utiliser Agevia en toute confiance :</p>
+                    <ul class="guide-security-list space-y-3">
+                        <li>Ne partagez jamais votre mot de passe</li>
+                        <li>Effectuez toujours les paiements uniquement sur la plateforme Agevia</li>
+                        <li>N'envoyer pas d'argent à un étudiant en dehors du site.</li>
+                        <li>Utilisez la messagerie Agevia pour vos échanges</li>
+                    </ul>
+                    <p class="guide-security-text leading-8">En cas de doute, contactez notre assisstance : agevia.support@gmail.com</p>
+                    <p class="guide-security-text leading-8"><span>COnseil :</span> Si quelque chose vous semble inhabituel, il vaut mieux nous prévenir.</p>
+                    <p class="guide-security-text leading-8">En cas d'autres questions, n'hésitez pas à faire un tour sur notre <a href="/faq" class="guide-link">Foires aux questions</a></p>
+                </div>
+            </article>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .guide-page {
+        background: var(--background-principal);
+    }
+
+    .guide-hero-sheen {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 12rem;
+        background: linear-gradient(to bottom, var(--background-soft), transparent);
+    }
+
+    .guide-hero-orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(64px);
+    }
+
+    .guide-hero-orb--one {
+        right: -5rem;
+        top: 2rem;
+        height: 14rem;
+        width: 14rem;
+        background: color-mix(in srgb, var(--couleur-secondaire) 20%, transparent);
+    }
+
+    .guide-hero-orb--two {
+        left: -4rem;
+        top: 9rem;
+        height: 11rem;
+        width: 11rem;
+        background: color-mix(in srgb, var(--couleur-primaire) 10%, transparent);
+    }
+
+    .guide-kicker {
+        color: var(--texte-secondaire);
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+    }
+
+    .guide-title {
+        color: var(--texte-primaire);
+    }
+
+    .guide-lead,
+    .guide-text,
+    .guide-plain,
+    .guide-security-text {
+        color: var(--texte-secondaire);
+    }
+
+    .guide-card {
+        border: 1px solid var(--bordure);
+        border-radius: 1.5rem;
+        background: white;
+        box-shadow: 0 10px 30px rgba(47, 93, 98, 0.06);
+    }
+
+    .guide-badge {
+        background: var(--background-soft);
+        color: var(--couleur-primaire);
+    }
+
+    .guide-section-title {
+        color: var(--texte-primaire);
+    }
+
+    .guide-media {
+        margin: 0;
+        width: min(100%, 32rem);
+        margin-inline: auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid var(--bordure);
+        background: var(--background-soft);
+    }
+
+    .guide-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .guide-note {
+        border-left: 4px solid var(--couleur-secondaire);
+        background: var(--background-soft);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .guide-note-text {
+        color: var(--texte-primaire);
+    }
+
+    .guide-note-text span {
+        font-weight: 700;
+        color: var(--couleur-primaire);
+    }
+
+    .guide-security {
+        background: var(--background-soft);
+        border-left: 4px solid var(--couleur-primaire);
+    }
+
+    .guide-security .guide-section-title,
+    .guide-security .guide-security-text,
+    .guide-security .guide-security-list,
+    .guide-security .guide-link {
+        color: var(--texte-primaire);
+    }
+
+    .guide-security-list {
+        padding-left: 1rem;
+        margin: 0;
+    }
+
+    .guide-security-list li {
+        position: relative;
+        padding-left: 0.75rem;
+    }
+
+    .guide-security-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--couleur-primaire);
+    }
+
+    .guide-link {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        color: var(--couleur-primaire);
+    }
+</style>
