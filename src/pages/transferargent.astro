@@ -1,0 +1,31 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Modalité de transfert d'argent">
+<h1>Modalité de transfert d'argent</h1>
+<h2>1. Rôle de la plateforme</h2>
+<p><span>Agevia</span> agit en tant qu'intermédiaire numérique de mise en relation. La plateforme n'intervient pas dans la réalisation de la prestation mais facilite le règlement financier entre le <span>Senior</span>
+(donneurd'ordre) et l' <span>Étudiant</span> (prestataire).</p>
+<h2>2. Séquestre de fonds</h2>
+<p>Pour garantir la sécurité de la transaction : </p>
+<ul>
+    <li><span>Réservation :</span>Lorsqu'un Senior valide une requête, le montant total de la prestation est débité et conservé sur un
+    <span>compte de cantonnement</span>(compte séquestre) géré par notre partenaire de paiement sécurisé <span>Paybox.</span></li>
+    <li><span>Garantie  :</span> L'argent n'est pas directement encaissé par OldHelp ni par l'étudiant à ce stade. Il est "bloqué" jusqu'à la confirmation de la réalisation du service.</li>
+</ul>
+<h2>3. Libération des fonds de Rémunération</h2>
+<p>Une fois la mission effectuée : </p>
+<ul>
+    <li><span>Validation :</span>Le prestataire envoie une demande de validation au donneur d’ordre, et celui-ci la valide. Si aucune demande ou validation n’est effectuée après la date d’échéance de la mission, au bout de 1 mois, elle est considérée comme validée et le paiement est automatiquement débloqué. Pour prévenir les oublis, les utilisateurs on 1 rappel par e-mail et notifications chaque semaine et peuvent paramétrer leurs rappels pour s’effectuer tous les jours.</li>
+    <li><span>Versement :</span>Le partenaire de paiement procède au virement automatique vers le compte bancaire du prestataire, après déduction des frais de service de la plateforme.</li>
+    <li><span>Délais :</span>Le transfert vers le compte de l'Étudiant est généralement effectif sous <span>15 jours</span> ouvrés, selon les délais bancaires en vigueur.</li>
+</ul>
+<h2>4. Frais de service</h2>
+<p>L'utilisation de la plateforme Agevia implique des frais de service destinés à couvrir les coûts de fonctionnement, d'assurance et de sécurisation des paiements.</p>
+<ul>
+    <li>Le prix affiché lors de la création de la requête par le Senior inclut la rémunération de l'étudiant et la commission d’Agevia.</li>
+    <li>Une facture détaillée est mise à disposition du Senior après chaque transaction.</li>
+</ul>
+<h2>5. Lutte contre le blanchiment et KYC (Know Your Customer)</h2>
+<p>Conformément à la réglementation en vigueur, notre partenaire de paiement peut être amené à vérifier l'identité du prestataire avant de procéder au versement des fonds, notamment par la demande d'une pièce d'identité valide et d'un RIB.</p>
