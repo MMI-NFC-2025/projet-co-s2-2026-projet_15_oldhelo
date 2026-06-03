@@ -1,7 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Presentation_agevia from '../assets/video/presentation_agevia.mp4'
 ---
 
 <Layout>
 
-</Layout>
+</Layout>---
+import Presentation_agevia from '../assets/video/presentation_agevia.mp4'
+---
+
+<figure class="max-w-4xl mx-auto px-4 py-8">
+  <video 
+    controls 
+    muted 
+    loop 
+    playsinline
+    preload="metadata"
+    poster="/assets/image/icon_aide_domicile.webp"
+    class="w-full aspect-video bg-black rounded-2xl shadow-2xl"
+    aria-label="Vidéo de présentation d’Agevia par les fondateurs du projet"
+  >
+    <source src="/videos/presentation_agevia.mp4" type="video/mp4" />
+    Votre navigateur ne supporte pas la lecture de cette vidéo.
+  </video>
+  
+  <figcaption class="text-center text-sm text-gray-500 mt-3">
+    Présentation d’Agevia par les fondateurs du projet
+  </figcaption>
+</figure>

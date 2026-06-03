@@ -1,0 +1,39 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Abonnement">
+<h1>Abonnement</h1>
+<div class="gratuit">
+    <h2>Gratuit</h2>
+    <p>Pour tester le site sans pression</p>
+    <p><span>0€</span>par mois</p>
+    <p>Inclut : </p>
+    <ul>
+        <li>Limite de 7 annonces par mois</li>
+    </ul>
+    <a href="/"><button>C'est parti</button></a>
+</div>
+<div class="étudiant">
+    <h2>Abonnement étudiant</h2>
+    <p>Pour les étudiants qui souhaitent répondre aux annonces</p>
+    <p><span>7€</span>par mois</p>
+    <p>Inclut : </p>
+    <ul>
+        <li>Toutes les annonces visibles</li>
+        <li>Gagnez plus de points de récompense</li>
+    </ul>
+    <a href="/"><button>C'est parti</button></a>
+  </div>
+  <div class="sénior">
+    <h2>Abonnement sénior et famille</h2>
+    <p>Pour les Seniors qui utilisent Agevia régulièrement</p>
+    <p><span>7€</span>par mois</p>
+    <p>Inclut : </p>
+    <ul>
+        <li>♾️ Annonces par mois</li>
+        <li>les services les mieux notés</li>
+    </ul>
+    <a href="/"><button>C'est parti</button></a>
+  </div>
+</Layout>
