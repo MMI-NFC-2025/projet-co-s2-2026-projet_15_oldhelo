@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+import Image from 'astro/components/Image.astro';
+import Explication from '../assets/image/textless_logo.svg';
+---
+<header class="border-b border-[color:var(--bordure)] bg-[color:var(--background-soft)]/95 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/landing" class="flex items-center gap-3 text-[color:var(--couleur-primaire)] no-underline">
+      <Image src={Explication} alt="Agevia" class="h-12 w-auto" />
+      <span class="text-3xl font-light tracking-[0.12em]" style="font-family: 'Oswald', sans-serif;">AGEVIA</span>
+    </a>
+    <nav aria-label="Navigation d'accès" class="flex items-center gap-3 sm:gap-4">
+      <a href="/connection" class="rounded-full border border-[color:var(--couleur-primaire)] px-4 py-2 text-sm font-semibold text-[color:var(--couleur-primaire)] no-underline transition hover:bg-[color:var(--couleur-primaire)] hover:text-white">Se connecter</a>
+      <a href="/creacompte" class="rounded-full bg-[color:var(--couleur-primaire)] px-4 py-2 text-sm font-semibold text-white no-underline transition hover:bg-[color:var(--accent-primaire)]">Créer un compte</a>
+    </nav>
+  </div>
+</header>
