@@ -1,0 +1,13 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Fleche from '../assets/icon/fleche.svg';
+---
+
+<Layout title="Confirmation de paiement">
+<h1>Confirmation de paiement</h1>
+<p>Montant</p>
+
+<p>Inclut les frais de plateforme et assurance</p>
+<button>Valider le paiement <Fleche> </button>

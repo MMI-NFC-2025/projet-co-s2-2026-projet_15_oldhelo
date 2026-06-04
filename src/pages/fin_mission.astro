@@ -1,0 +1,29 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Note_avis from '../assets/icon/etoile_avis.svg';
+import Check from '../assets/icon/check.svg';
+---
+
+<Layout title="Fin de mission">
+<h1>Fin de mission</h1>
+<div>
+
+</div>
+<h2>Donner un avis</h2>
+<p>Partager votre expérience avec ... pour aider la communauté</p>
+<div>
+    <Note_avis/>
+    <Note_avis/>
+    <Note_avis/>
+    <Note_avis/>
+    <Note_avis/>
+</div>
+<div class="commentaire">
+    <label>Votre commentaire</label>
+    <textarea placeholder="Laissez votre commentaire ici..."></textarea>
+</div>
+<button><Check/> Marquer comme fini</button>
+<button>Annuler</button>
+</Layout>
