@@ -4,6 +4,9 @@ import { Image } from 'astro:assets';
 import Aide_connexion from '../assets/image/aide_connexion.webp';
 import Creation_compte from '../assets/image/creation_compte.webp';
 import Envoi_mission from '../assets/image/envoi_mission.webp';
+import Choix_etudiant from '../assets/image/choix_etudiant.webp';
+import Confirmation_paiement from '../assets/image/confirmation_paiement.webp';
+import Fin_mission from '../assets/image/fin_mission.webp';
 ---
 
 <Layout title="Guide d'utilisation Agevia">
@@ -307,16 +310,14 @@ import Envoi_mission from '../assets/image/envoi_mission.webp';
 <p>Remplissez les informations demandées puis cliquez sur “Valider”.</p>
 <p><span>Conseil :</span>Plus votre description est précise, plus les étudiants pourront vous aider efficacement.</p>
 <h3>Choix de l'étudiant</h3>
-
+<Image src={Choix_etudiant} alt="Image de choix de l'étudiant" />
 <p>Accédez facilement aux profils des étudiants afin de faire le tri dans les réponses à vos missions. Vous pourrez le choisir grâce à la visualisation de son profil qui s’ouvre dans une fenêtre. </p>
-
-<p>Présentation d’un profil étudiant</p>
-
-<p><span>Conseil :</span>Vous pouvez échanger avec l'étudiant avant de confirmer, si vous le souhaitez.</p>
+<p><span>Conseil :</span>Vous pouvez échanger avec l'étudiant avant de confirmer l'acceptation de la candidature, si vous le souhaitez.</p>
 <h3>Paiement sécurisé</h3>
+<Image src={Confirmation_paiement} alt="Image de confirmation de paiement" />
 <p>Après chaque paiement, vous recevrez un message de confirmation. Le paiement sur Agevia est sécurisé. L’argent est versé uniquement lorsque la mission est terminée.</p>
 <h3>Fin de mission</h3>
-
+<Image src={Fin_mission} alt="Image de fin de mission" />
 <p>L’indication de la fin de mission, déclenchera automatiquement le versement de l’argent à l'étudiant.</p>
 <p><span>Conseil :</span>N’hésitez pas à attribuer un avis.</p>
 <h3>Sécurité</h3>
