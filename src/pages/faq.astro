@@ -1,49 +1,153 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="Foire aux questions">
-<h1> FAQ </h1>
-<div>
-  <p><strong>Qu’est ce qu’Agevia ?</strong></p>
-  <p>Agevia est une plateforme permettant aux seniors d’exprimer leurs besoins afin que des étudiants motivés et disponibles puissent venir les réaliser. Agevia a pour objectif de lutter contre l’isolement des seniors tout en aidant les étudiants en situation de précarité grâce à des missions ponctuelles rémunérées.</p>
-</div>
-<div>
-  <p><strong>Quelles sont les missions types ? </strong></p>
-  <p>Les missions sont diverses : promenade d’un animal de compagnie, ménage, compagnie, désherbage, aide administrative, etc. Pour les seniors, des modèles de missions ainsi qu’un guide sont proposés afin de vous aider lors de la création de vos annonces à destination des étudiants.</p>
-</div>
-<div>
-  <p><strong>Puis-je choisir un étudiant en particulier ? </strong></p>
-  <p>Oui, bien sûr. Lorsqu’un étudiant candidate à votre mission, vous pouvez accepter ou refuser sa demande.</p>
-  <p>Vous aurez accès à son profil, qui comprend :</p>
-  <ul>
-    <li>une photo</li>
-    <li>un pseudo</li>
-    <li>une présentation</li>
-    </ul>
-<p>Sa note moyenne attribuée par les autres utilisateurs</p>
-</div>
-<div>
-  <p><strong>Comment fonctionne la notation ?</strong></p>
-  <p>Que vous ayez un compte senior ou étudiant, après chaque mission, les participants peuvent attribuer une note à l’autre s’ils le souhaitent. Ces notes permettent d’évaluer le sérieux, la fiabilité et le savoir-être de chaque utilisateur, du moins elles donnent une idée. </p>
-</div>
-<div>
-  <p><strong>Y a-t-il des frais d’inscription ?</strong></p>
-  <p>L’inscription à la plateforme, qu’importe le compte, est gratuit. Cependant, nous proposons également des abonnements offrant des avantages supplémentaires, détaillés sur notre page dédiée.</p>
-</div>
-<div>
-  <p><strong>Comment l'étudiant est-il rémunéré ? </strong></p>
-  <p>Le paiement est réalisé via la plateforme Agevia, qui accepte différents modes de paiement en ligne sécurisés. En cas de retard de paiement, des rappels automatiques sont envoyés. Si aucun règlement n’est effectué après plusieurs relances, des mesures prévues dans les conditions générales pourront être appliquées.</p>
-</div>
-<div>
-  <p><strong>Puis-je annuler mon abonnement ? </strong></p>
-  <p>Oui totalement, il est résiliable à tout moment.</p>
-</div>
-<div>
-  <p><strong>Mes données sont-elles protégées ?</strong></p>
-  <p>Oui. Agevia respecte la réglementation en vigueur en matière de protection des données personnelles.</p>
-</div>
-<div>
-  <p><strong>Comment contacter le support ?</strong></p>
-  <p>Vous pouvez nous contacter via le formulaire disponible sur le site ou à l’adresse e-mail indiquée dans les mentions légales.</p>
-</div>
+  <div class="faq-container">
+    <h1>FAQ</h1>
+    
+    <div class="faq-grid">
+      <!-- Q1 -->
+      <details>
+        <summary>Qu’est ce qu’Agevia ?</summary>
+        <div class="faq-content">
+          <p>Agevia est une plateforme permettant aux seniors d’exprimer leurs besoins afin que des étudiants motivés et disponibles puissent venir les réaliser. Agevia a pour objectif de lutter contre l’isolement des seniors tout en aidant les étudiants en situation de précarité grâce à des missions ponctuelles rémunérées.</p>
+        </div>
+      </details>
+
+      <!-- Q2 -->
+      <details>
+        <summary>Y a-t-il des frais d’inscription ?</summary>
+        <div class="faq-content">
+          <p>L’inscription à la plateforme, qu’importe le compte, est gratuit. Cependant, nous proposons également des abonnements offrant des avantages supplémentaires, détaillés sur notre page dédiée.</p>
+        </div>
+      </details>
+
+      <!-- Q3 -->
+      <details>
+        <summary>Quelles sont les missions types ?</summary>
+        <div class="faq-content">
+          <p>Les missions sont diverses : promenade d’un animal de compagnie, ménage, compagnie, désherbage, aide administrative, etc. Pour les seniors, des modèles de missions ainsi qu’un guide sont proposés afin de vous aider lors de la création de vos annonces à destination des étudiants.</p>
+        </div>
+      </details>
+
+      <!-- Q4 -->
+      <details>
+        <summary>Comment l'étudiant est-il rémunéré ?</summary>
+        <div class="faq-content">
+          <p>Le paiement est réalisé via la plateforme Agevia, qui accepte différents modes de paiement en ligne sécurisés. En cas de retard de paiement, des rappels automatiques sont envoyés. Si aucun règlement n’est effectué après plusieurs relances, des mesures prévues dans les conditions générales pourront être appliquées.</p>
+        </div>
+      </details>
+
+      <!-- Q5 -->
+      <details>
+        <summary>Puis-je choisir un étudiant en particulier ?</summary>
+        <div class="faq-content">
+          <p>Oui, bien sûr. Lorsqu’un étudiant candidate à votre mission, vous pouvez accepter ou refuser sa demande.</p>
+          <p>Vous aurez accès à son profil, qui comprend :</p>
+          <ul>
+            <li>une photo</li>
+            <li>un pseudo</li>
+            <li>une présentation</li>
+          </ul>
+          <p>Sa note moyenne attribuée par les autres utilisateurs</p>
+        </div>
+      </details>
+
+      <!-- Q6 -->
+      <details>
+        <summary>Puis-je annuler mon abonnement ?</summary>
+        <div class="faq-content">
+          <p>Oui totalement, il est résiliable à tout moment.</p>
+        </div>
+      </details>
+
+      <!-- Q7 -->
+      <details>
+        <summary>Comment fonctionne la notation ?</summary>
+        <div class="faq-content">
+          <p>Que vous ayez un compte senior ou étudiant, après chaque mission, les participants peuvent attribuer une note à l’autre s’ils le souhaitent. Ces notes permettent d’évaluer le sérieux, la fiabilité et le savoir-être de chaque utilisateur, du moins elles donnent une idée.</p>
+        </div>
+      </details>
+
+      <!-- Q8 -->
+      <details>
+        <summary>Mes données sont-elles protégées ?</summary>
+        <div class="faq-content">
+          <p>Oui. Agevia respecte la réglementation en vigueur en matière de protection des données personnelles.</p>
+        </div>
+      </details>
+
+      <!-- Q9 -->
+      <details>
+        <summary>Comment contacter le support ?</summary>
+        <div class="faq-content">
+          <p>Vous pouvez nous contacter via le formulaire disponible sur le site ou à l’adresse e-mail indiquée dans les mentions légales.</p>
+        </div>
+      </details>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    color: #2c4c4c; /* Matching the dark teal color from your image */
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  /* Creates the 2-column grid layout matching your image */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 4rem; /* 2rem vertical gap, 4rem horizontal gap */
+  }
+
+  /* Responsive layout for smaller screens / mobile */
+  @media (max-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  details {
+    margin-bottom: 0.5rem;
+  }
+
+  summary {
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style-position: outside;
+    padding-left: 0.5rem;
+    user-select: none;
+    outline: none;
+  }
+  
+  /* Adds a smooth hover feedback on the questions */
+  summary:hover {
+    color: #2c4c4c;
+  }
+
+  /* Style for the answer text that reveals itself */
+  .faq-content {
+    padding: 1rem 0 1rem 1.5rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+
+  .faq-content ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+  }
+</style>

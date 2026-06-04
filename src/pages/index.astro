@@ -1,8 +1,111 @@
 ---
-import HomeDashboard from '../components/HomeDashboard.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Image from 'astro/components/Image.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import hero from '../assets/image/hero.png';
+import agevialeft from '../assets/image/agevia_left.png';
+import ageviaright from '../assets/image/agevia_right.png';
+import senior_computer from '../assets/image/senior_computer.png';
+
+const faq = [
+  { q: "Y a-t-il des frais d'inscription ?", a: "L'inscription est gratuite. Des abonnements avec avantages supplémentaires sont disponibles sur notre page dédiée." },
+  { q: "Mes données sont-elles protégées ?", a: "Oui. Agevia respecte la réglementation en vigueur en matière de protection des données personnelles." },
+  { q: "Puis-je choisir l'étudiant qui m'aide ?", a: "Oui. Quand un étudiant candidate, vous pouvez accepter ou refuser. Vous accédez à son profil : photo, pseudo, présentation et note moyenne." },
+  { q: "Quel genre de missions puis-je poster ?", a: "Promenade d'animal, ménage, compagnie, désherbage, aide administrative… Des modèles et un guide sont proposés." },
+  { q: "Comment l'étudiant est-il rémunéré ?", a: "Le paiement est réalisé via la plateforme Agevia, avec différents modes de paiement sécurisés." },
+  { q: "Puis-je annuler mon abonnement ?", a: "Oui, l'abonnement est résiliable à tout moment." },
+];
+
+const requetes = [
+  { titre: "Besoin d'aide avec mon jardin", desc: "Je ne peux plus arroser mon jardin et il faudrait…", color: "#9cc5a1" },
+  { titre: "Recherche aide pour des courses", desc: "J'habite loin du magasin et ne peux plus conduire…", color: "#c76d45" },
+  { titre: "Cherche joueur pétanque", desc: "Mon groupe de pétanque a eu un désistement et nou…", color: "#2f5d62" },
+];
 ---
 
-<Layout title="Accueil">
-	<HomeDashboard />
-</Layout>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <title>Agevia – Entraide intergénérationnelle</title>
+</head>
+<body class="font-montserrat bg-[--background-principal] text-[--texte-primaire]">
+  <Header />
+
+  <Image src={hero} alt="Rejoignez nous" class="w-full block" />
+
+  <!-- COMMENT CA MARCHE -->
+  <section class="py-16 px-8 text-center">
+    <h2 class="text-3xl font-extrabold mb-2">Entraide intergénérationnelle</h2>
+    <h3 class="text-lg font-semibold text-[--texte-secondaire] mb-12">Comment ça marche :</h3>
+    <div class="flex justify-center gap-20 flex-wrap">
+      <div class="flex flex-col items-center gap-4 max-w-[160px]">
+        <Image src={agevialeft} alt="Icône senior" class="step-icon" />
+        <div class="step-num">1</div>
+        <p class="text-sm font-semibold text-center leading-snug">Une personne âgée crée une requête</p>
+      </div>
+      <div class="flex flex-col items-center gap-4 max-w-[160px]">
+        <Image src={ageviaright} alt="Icône jeune" class="step-icon" />
+        <div class="step-num">2</div>
+        <p class="text-sm font-semibold text-center leading-snug">Un Jeune répond et effectue la tâche</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section class="bg-[--background-soft] py-12 px-8 text-center flex flex-col items-center gap-6">
+    <p class="max-w-xl text-[0.95rem] leading-relaxed">
+      <strong>Agevia</strong> est une plateforme qui permet aux seniors de demander des services aux jeunes.<br/><br/>
+      Si vous avez besoin d'un <strong>service simple</strong>, comme faire des courses, de l'entretien de maison ou encore besoin de compagnie, Agevia est La solution !
+    </p>
+    <a href="/creacompte" class="btn-primary">Rejoindre Agevia</a>
+  </section>
+
+  <!-- DERNIÈRES REQUÊTES -->
+  <section class="py-14 px-8 max-w-2xl mx-auto">
+    <h2 class="text-xl font-extrabold mb-2">Dernières requêtes</h2>
+    <hr class="border-[--bordure] mb-6" />
+    {requetes.map((r) => (
+      <div class="flex items-center gap-5 py-4 border-b border-[--bordure]">
+        <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center" style={`background: ${r.color}22;`}>
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" fill={r.color}/>
+            <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" fill={r.color} opacity="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold mb-0.5">{r.titre}</h4>
+          <p class="text-xs text-[--texte-secondaire]">{r.desc}</p>
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <!-- ACCESSIBILITÉ -->
+  <section class="bg-[--background-soft] grid grid-cols-2 min-h-[260px] max-sm:grid-cols-1">
+    <div class="p-12 flex items-center">
+      <p class="text-base leading-loose max-w-sm">
+        <strong>Agevia</strong> permet de modifier ses <strong>options d'accessibilité</strong> avec facilité et flexibilité pour correspondre à toute le monde.
+      </p>
+    </div>
+    <Image src={senior_computer} alt="Senior devant ordinateur" class="w-full h-full object-cover" />
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-8 max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold mb-8">FAQ</h2>
+    {faq.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <div class="faq-answer">{item.a}</div>
+      </details>
+    ))}
+  </section>
+
+  <Footer />
+</body>
+</html>
