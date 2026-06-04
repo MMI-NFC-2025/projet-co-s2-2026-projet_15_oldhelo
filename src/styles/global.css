@@ -21,3 +21,17 @@
   --texte-primaire: #2e2e2e;
   --texte-secondaire: #6b6b6b;
 }
+
+/* Dégradés */
+.gradient-logo {
+  background: linear-gradient(135deg, #2f5d62 0%, #9cc5a1 100%);
+}
+
+.gradient-logo-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(135deg, #2f5d62 0%, #9cc5a1 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 0.5rem;
+}

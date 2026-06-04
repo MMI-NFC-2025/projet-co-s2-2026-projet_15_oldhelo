@@ -1,16 +1,41 @@
 ---
 import "../styles/global.css";
 import Image from 'astro/components/Image.astro';
-import Explication from '../assets/image/textless_logo.svg'
+import Explication from '../assets/image/textless_logo.svg';
 ---
-<div class="flex bg-[#f2ece4] p-8">
-  <a href="/accueil" class="mr-4 inline-flex">
-    <Image
-      src={Explication}
-      alt=""
-      class="w-16 h-12"
-    />
-  <div class="text-4xl font-light font-oswald bg-gradient-to-r from-[#2F5D62] to-[#9CC5A1] bg-clip-text text-transparent" style="font-family: 'Oswald', sans-serif;">AGEVIA</div>
-  </a>
-</div>
+<header class="border-b border-[color:var(--bordure)] bg-[color:var(--background-soft)]/95 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/accueil" class="flex items-center gap-3 text-[color:var(--couleur-primaire)] no-underline">
+      <Image src={Explication} alt="Agevia" class="h-12 w-auto" />
+      <span class="text-3xl font-light tracking-[0.12em]" style="font-family: 'Oswald', sans-serif;">AGEVIA</span>
+    </a>
 
+    <nav aria-label="Navigation principale" class="hidden items-center gap-6 md:flex">
+      <a href="/profil" class="inline-flex items-center gap-2 text-lg text-[color:var(--couleur-primaire)] no-underline hover:text-[color:var(--accent-primaire)]">
+        <span>Profil</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M5 20c1.6-3.6 5-5.5 7-5.5S17.4 16.4 19 20"></path>
+        </svg>
+      </a>
+      <a href="/missions" class="inline-flex items-center gap-2 text-lg text-[color:var(--couleur-primaire)] no-underline hover:text-[color:var(--accent-primaire)]">
+        <span>Missions</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+          <path d="M8 3v4M16 3v4M8 12h8M8 16h5"></path>
+        </svg>
+      </a>
+      <a href="/recherche" aria-label="Recherche" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-[color:var(--couleur-primaire)] no-underline hover:bg-white/70 hover:text-[color:var(--accent-primaire)]">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+      </a>
+      <a href="/parametre" aria-label="Menu" class="inline-flex h-11 w-11 items-center justify-center rounded-full text-[color:var(--couleur-primaire)] no-underline hover:bg-white/70 hover:text-[color:var(--accent-primaire)]">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
