@@ -1,7 +1,91 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import JardinageImage from '../assets/image/icon_petit_travaux.webp';
+import OrdinateurImage from '../assets/image/icon_service_ponctuel.webp';
+import CoursesImage from '../assets/image/icon_lien_social.webp';
+import DiscussionImage from '../assets/image/icon_aide_domicile.webp';
+
+const pbUrl = 'http://127.0.0.1:8090';
+const fallbackMissions = [
+	{ title: 'Jardinage de Printemps', type: 'Jardinage', description: 'Je ne peux plus arroser mon jardin et il faudrait de l’aide. Le profil que je recherche serait un jeune qui s’y connaît.', price: 16, image: JardinageImage.src, status: 'A faire' },
+	{ title: 'Introduction aux ordinateurs', type: 'Numérique', description: 'Je souhaite avoir de l’aide avec mon ordinateur pour l’utiliser afin d’écrire des messages en sécurité sur internet.', price: 15, image: OrdinateurImage.src, status: 'En cours' },
+	{ title: 'Mission courses rapides', type: 'Courses', description: 'Il faudrait me rapporter des courses pour demain après-midi : nutella, confiture et quelques produits du quotidien.', price: 10, image: CoursesImage.src, status: 'Publié' },
+	{ title: 'Temps de discussion', type: 'Compagnie', description: 'Je recherche un étudiant pour discuter pendant quelques jours afin d’avoir un peu plus de contact humain.', price: 12, image: DiscussionImage.src, status: 'En cours de paiement' },
+];
+
+let missions = fallbackMissions;
+
+try {
+	const response = await fetch(`${pbUrl}/api/collections/Mission/records?sort=-created&expand=createur,candidat&perPage=40`);
+	if (response.ok) {
+		const data = await response.json();
+		const records = data?.items ?? [];
+		if (records.length) {
+			missions = records.map((record, index) => ({
+				title: record.Titre ?? `Mission ${index + 1}`,
+				type: record.type ?? 'Mission',
+				description: record.description ?? '',
+				price: record.prix ?? '',
+				status: record.statut ?? 'A faire',
+				image: record.icon ? `${pbUrl}/api/files/Mission/${record.id}/${record.icon}` : fallbackMissions[index % fallbackMissions.length].image,
+			}));
+		}
+	}
+} catch {
+	missions = fallbackMissions;
+}
+
+const visibleMissions = missions.slice(0, 4);
+const subscriptionCard = {
+	title: 'Encore plus d’annonces disponibles avec un abonnement !! 🚀',
+	description: 'Soutenez Agevia et profitez d’avantages supplémentaires en débloquant l’abonnement.',
+};
 ---
 
 <Layout>
+<Layout title="Missions">
+	<main class="bg-white text-[color:var(--texte-primaire)]">
+		<section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+			<p class="text-sm text-[color:var(--texte-secondaire)]">Accueil → Missions</p>
+			<h1 class="mt-2 font-oswald text-5xl leading-tight text-[color:var(--couleur-primaire)]" style="font-family: 'Oswald', sans-serif;">Missions disponibles</h1>
 
+			<div class="mt-6 grid gap-6 lg:grid-cols-2">
+				{visibleMissions.map((mission) => (
+					<article class="rounded-[2rem] bg-[color:var(--background-soft)] p-4 shadow-[0_10px_30px_rgba(47,93,98,0.08)]">
+						<div class="flex items-center gap-4 rounded-[1.5rem] bg-[linear-gradient(135deg,#f4ede2_0%,#efe5d9_100%)] px-4 py-3">
+							<span class="h-12 w-12 rounded-full bg-[color:var(--couleur-secondaire)]"></span>
+							<h2 class="font-oswald text-3xl text-[color:var(--texte-primaire)]" style="font-family: 'Oswald', sans-serif;">{mission.title}</h2>
+						</div>
+
+						<div class="mt-4 grid gap-4 sm:grid-cols-[160px_1fr]">
+							<img src={mission.image} alt={mission.title} class="h-40 w-full rounded-[1.5rem] object-cover" />
+							<div class="flex flex-col justify-between gap-4">
+								<div>
+									<p class="text-sm uppercase tracking-[0.22em] text-[color:var(--texte-secondaire)]">{mission.type}</p>
+									<p class="mt-2 text-base leading-7 text-[color:var(--texte-primaire)]">{mission.description}</p>
+								</div>
+								<div class="flex items-center justify-between gap-4">
+									<span class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[color:var(--couleur-primaire)]">{mission.status}</span>
+									<p class="text-2xl font-light text-[color:var(--texte-primaire)]">Rémunération : {mission.price}€</p>
+								</div>
+							</div>
+						</div>
+					</article>
+				))}
+
+				<article class="rounded-[2rem] border-2 border-[color:var(--couleur-primaire)] bg-[linear-gradient(135deg,#f4ede2_0%,#eef4ee_100%)] p-6 shadow-[0_10px_30px_rgba(47,93,98,0.08)] lg:col-span-2">
+					<div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+						<div>
+							<p class="text-sm uppercase tracking-[0.26em] text-[color:var(--texte-secondaire)]">Abonnement Agevia</p>
+							<h2 class="mt-3 max-w-3xl font-oswald text-4xl leading-tight text-[color:var(--couleur-primaire)]" style="font-family: 'Oswald', sans-serif;">{subscriptionCard.title}</h2>
+							<p class="mt-4 max-w-2xl text-lg leading-8 text-[color:var(--texte-primaire)]">{subscriptionCard.description}</p>
+						</div>
+						<div class="flex items-center justify-center">
+							<a href="/abonnement" class="inline-flex items-center justify-center rounded-full bg-[color:var(--couleur-primaire)] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white no-underline transition hover:bg-[color:var(--accent-primaire)]">S’abonner tout de suite</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
 </Layout>
