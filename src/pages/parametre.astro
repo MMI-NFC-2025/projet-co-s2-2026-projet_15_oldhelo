@@ -1,7 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+<Layout title="Paramètres">
+  <main class="max-w-2xl mx-auto px-8 py-12 font-montserrat text-[--texte-primaire]">
 
-<Layout>
+    <h1 class="text-2xl font-bold text-[--couleur-primaire] mb-6">Paramètres</h1>
 
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-3">Accessibilité :</h2>
+      <p class="flex items-center gap-2 text-base mb-3">
+        <span class="text-[--couleur-primaire] font-bold">•</span> Taille des textes :
+      </p>
+      <input
+        type="range" id="font-slider"
+        min="80" max="140" value="100" step="5"
+        class="w-full accent-[#2f5d62] cursor-pointer"
+      />
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold mb-3">Mon abonnement</h2>
+      <p class="flex items-center gap-2 text-base">
+        <span class="text-[--couleur-primaire] font-bold">•</span>
+        <a href="/abonnement" class="underline text-[--couleur-primaire] hover:opacity-70 transition-opacity">
+          Gérer mon abonnement
+        </a>
+      </p>
+    </section>
+
+  </main>
 </Layout>
+
+<script>
+  const slider = document.getElementById('font-slider') as HTMLInputElement;
+
+  const saved = localStorage.getItem('font-scale') ?? '100';
+  slider.value = saved;
+
+  slider.addEventListener('input', () => {
+    document.documentElement.style.fontSize = (Number(slider.value) / 100) + 'rem';
+    localStorage.setItem('font-scale', slider.value);
+  });
+</script>
