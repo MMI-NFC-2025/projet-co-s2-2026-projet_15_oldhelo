@@ -1,50 +1,8 @@
 ---
-import Image from 'astro/components/Image.astro';
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
-import Explication from '../assets/image/explication_agevia.webp'
+import HomeDashboard from '../components/HomeDashboard.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Entraide Intergénérationnelle">
-<h1>Vous recherchez un job étudiant, ou vous êtes en recherche d’aide a domicile ? </h1>
-<p> Missions <strong> variées </strong> et <strong> gratifiantes </strong> </p>
-<p> Localisé à <strong> Montbéliard et ses alentours</strong> </p>
-<p> Aide ponctuelle </p>
-<p> Simple à prendre en main </p>
-<p>Vidéo de présentation d’Agevia par les fondateurs du projet.</p>
-<a href="/demander_aide" class="button">Je recherche de l’aide</a>
-<a href="/donner_aide" class="button">Je veux aider</a>
-<h2> Entraide intergénérationnelle </h2>
-<p> Comment ça marche :</p>
-<Image
-  src={Explication}
-  alt="Image représentant à l’aide du logo les différentes options d’Agevia. Nous pouvons soit créer des missions, soit y répondre et aider."
-/>
-<h3 class="citation"> Agevia est une plateforme qui permet aux seniors de demander des services aux étudiants.</h3>
-<p> Agevia, plateforme de mise en relation entre seniors et étudiants. <strong>Le but ? </strong> Proposer une aide locale à domicile pour les seniors en difficulté. 
-Le système est simple : <strong>le senior publie une mission dont il a besoin, et l’étudiant y postule.</strong> Courses, entretien de la maison ou simplement besoin de compagnie… Agevia est la solution. </p>
-<p> Agevia répond à des besoins bien réels. En 2026, <strong>près de 2 millions de personnes âgées de 60 ans et plus sont isolées en France</strong>. 
-Parmi elles, <strong>plus de 700 000 vivent une situation de "mort sociale"</strong>, sans interactions régulières avec leur entourage. </p>
-<p> Face à cette réalité, Agevia agit concrètement en recréant du lien social tout en apportant une aide utile au quotidien. </p>
-<h3> Dernières requêtes</h3>
-<div class="dernières requêtes">
-<alt> Photo de profil de l’utilisateur </alt> 
-<p><strong>Besoin d’aide avec mon jardin</strong></p>
-Je ne peux plus arroser mon jardin et il faudrait [...]</a>
-</div>
-<h4> Foire aux questions (FAQ) </h4>
-<div class="FAQ">
-<strong> Quelles sont les missions types ? </strong>
-<p> Les missions sont diverses : promenade d’un animal de compagnie, ménage, compagnie, désherbage, aide administrative, etc. Pour les seniors, des modèles de missions ainsi qu’un guide sont proposés afin de vous aider lors de la création de vos annonces à destination des étudiants. </p>
-<strong> Y a-t-il des frais d’inscription ? </strong>
-<p> L’inscription à la plateforme, qu’importe le compte, est gratuit. Cependant, nous proposons également des abonnements offrant des avantages supplémentaires, détaillés sur notre page dédiée </p>
-<strong> Comment fonctionne la rémunération ? </strong>
-<p> Le paiement est réalisé via la plateforme Agevia, qui accepte différents modes de paiement en ligne sécurisés. En cas de retard de paiement, des rappels automatiques sont envoyés. Si aucun règlement n’est effectué après plusieurs relances, des mesures prévues dans les conditions générales pourront être appliquées.</p>
-<strong> Mes données sont-elles protégées ? </strong>
-<p>Oui. Agevia respecte la réglementation en vigueur en matière de protection des données personnelles.</p>
-<strong> Comment contacter le support ? </strong>
-<p> Vous pouvez nous contacter via le formulaire disponible sur le site ou à l’adresse e-mail indiquée dans les mentions légales. </p>
-<a href="/faq" class="button">En savoir plus</a>
+<Layout title="Accueil">
+	<HomeDashboard />
 </Layout>
-
