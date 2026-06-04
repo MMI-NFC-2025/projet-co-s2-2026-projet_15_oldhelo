@@ -1,0 +1,35 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Check from '../assets/icon/check.svg';
+import Favori from '../assets/icon/favori.svg';
+import Presentation from '../assets/icon/presentation.svg';
+import Service from '../assets/icon/service.svg';
+import Competence from '../assets/icon/competence.svg';
+---
+
+<Layout title="Choix de l'étudiant">
+<h1>Choix de l'étudiant</h1>
+<p><span>Candidatures reçues</span></p>
+<button>Toutes</button>
+<button>Nouvelles</button>
+<button>En attente</button>
+<div class="candidatures">
+    <div class="info">
+        <p> <Check>Profil vérifié Agevia</p>
+        <button>Contacter moi</button>
+        <button>Retenir le profil</button>
+        <button><Favori></button>
+    </div>
+    <div class="présentation">
+        <p><Presentation>Présentation</p>
+    </div>
+        <div class="service">
+        <p><Service>Service et accompagnement</p>
+    </div>
+        <div class="compétences">
+        <p><Competence>Compétences techniques</p>
+            <p>a enelver</p>
+    </div>
+</Layout>
