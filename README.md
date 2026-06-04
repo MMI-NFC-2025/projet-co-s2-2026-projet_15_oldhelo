@@ -5,7 +5,7 @@
 
 - [x] Nom du projet : Agevia
 - [ ] URL de la landing page : 
-- [ ] URL de l'application finale : 
+- [ ] URL de l'application finale (netlify) : https://cozy-buttercream-4eaf40.netlify.app/
 - [x] URL de connexion au back office : http://127.0.0.1:8090/_/ 
 - [x] Identifiant de connexion au backoffice : g75835552@gmail.com
 - [x] Mot de passe de connexion au backoffice : pujgix-beprA2-zocrav 
