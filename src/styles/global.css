@@ -17,7 +17,11 @@
   --texte-handicapé: #a8a8a8;
   --texte-primaire: #2e2e2e;
   --texte-secondaire: #6b6b6b;
+  --font-scale: 100;
 }
+
+/* Taille de police globale pilotée par le slider */
+html { font-size: calc(var(--font-scale) * 0.01rem); }
 
 .gradient-logo {
   background: linear-gradient(135deg, #2f5d62 0%, #9cc5a1 100%);
