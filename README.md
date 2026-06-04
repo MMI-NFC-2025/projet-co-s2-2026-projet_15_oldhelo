@@ -4,7 +4,7 @@
 Éléménts à renseigner pour la soutenance :
 
 - [x] Nom du projet : Agevia
-- [x] URL de la landing page : https://agevia.merlinhenry.fr/parametre/
+- [x] URL de la landing page : https://agevia.merlinhenry.fr/parametre/](https://agevia.merlinhenry.fr/landing/
 - [x] URL de l'application finale (netlify) : https://cozy-buttercream-4eaf40.netlify.app/
 - [x] URL de connexion au back office : http://127.0.0.1:8090/_/ 
 - [x] Identifiant de connexion au backoffice : g75835552@gmail.com
